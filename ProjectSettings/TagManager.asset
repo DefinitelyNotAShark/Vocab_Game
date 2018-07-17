@@ -9,6 +9,7 @@ TagManager:
   - BubbleWord
   - Bubble
   - MeaningObject
+  - Checker
   layers:
   - Default
   - TransparentFX

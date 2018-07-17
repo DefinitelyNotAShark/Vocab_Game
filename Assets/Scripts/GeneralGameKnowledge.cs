@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class GeneralGameKnowledge : MonoBehaviour
 {
-    public static bool gameOver = false;
-    public static List<string> meaningSlots;
-    public static bool BubbleSelected = false;
-    public static bool MeaningSelected = false;
+    public static bool gameOver = false;//whether the game over needs to happen
 
-    public static string VocabWordSelected;
-    public static string MeaningWordSelected;
+    public static List<string> meaningSlots;//how many slots need to be filled with non-repeating words
+
+    public static bool BubbleSelected = false;//whether a bubble is selected
+    public static bool MeaningSelected = false;//whether a word from the bank is selected
+
+    public static string VocabWordSelected;//the actual string of the bubble word
+    public static string MeaningWordSelected;//the actual string of the vocab word
+
+    public static GameObject CurrentBubbleSelected;
 
     private void Awake()
     {

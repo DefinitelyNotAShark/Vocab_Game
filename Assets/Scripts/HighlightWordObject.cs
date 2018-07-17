@@ -6,12 +6,14 @@ public class HighlightWordObject : MonoBehaviour
 {
     private TextMesh mesh;
 
-    private bool selected = false;
+    public CheckMatch checkMatch;
+    public bool selected = false;
 
     // Use this for initialization
     void Awake()
     {
         mesh = GetComponentInChildren<TextMesh>();
+        checkMatch = GetComponent<CheckMatch>();
     }
 
     private void OnMouseEnter()
@@ -58,6 +60,10 @@ public class HighlightWordObject : MonoBehaviour
         {
             mesh.color = Color.white;
             GeneralGameKnowledge.BubbleSelected = true;//this tells the game manager that it is selected!
+
+            //this line sets the int to the index of the word that is attatched to the object
+            CheckMatch.vocabInt = GetTextInput.vocabWords.IndexOf(mesh.text);
+            GeneralGameKnowledge.CurrentBubbleSelected = this.gameObject;
             selected = true;
         }
     }
@@ -80,6 +86,9 @@ public class HighlightWordObject : MonoBehaviour
         {
             mesh.color = Color.white;
             GeneralGameKnowledge.MeaningSelected = true;//this tells the game manager that it is selected!
+
+            //this line sets the int to the index of the word that is attatched to the object
+            CheckMatch.meaningInt = GetTextInput.meaningWords.IndexOf(mesh.text);
             selected = true;
         }
     }

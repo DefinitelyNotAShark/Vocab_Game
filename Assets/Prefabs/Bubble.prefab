@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67135e72750b79245bc4df96b20c29bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vocabIndex: 0
 --- !u!114 &114805667477806418
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,6 +251,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f00b8202eddaf19448ab2bd45a22a16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  particles:
+  - {fileID: 198782529226968460}
+  - {fileID: 198888962362273950}
 --- !u!114 &114892466427266260
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -261,6 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4be9d4a30ec71ae44a82dcac02d1f22b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkMatch: {fileID: 0}
+  selected: 0
 --- !u!198 &198782529226968460
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -321,7 +327,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -410990358
+  randomSeed: 1026950799
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -3682,7 +3688,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -2084960822
+  randomSeed: -1506344641
   InitialModule:
     serializedVersion: 3
     enabled: 1
